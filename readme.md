@@ -12,5 +12,7 @@ With **intelliJ**
   1. Run `main.java`
 
 With only the command line:
+
   `./gradlew build`
+  
   `./gradlew run`
