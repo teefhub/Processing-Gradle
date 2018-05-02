@@ -1,10 +1,19 @@
 group 'play.processing'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'groovy'
+apply plugin: 'application'
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
+mainClassName = 'Main'
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'Main'
+    )
+  }
+}
 
 repositories {
     mavenCentral()
