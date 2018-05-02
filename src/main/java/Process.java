@@ -8,6 +8,7 @@ public class Process extends PApplet{
     List<Ball> balls = new ArrayList<>();
 
     public void settings(){
+        //the width/height of the display screen
         size(400, 600);
     }
 
@@ -26,7 +27,7 @@ public class Process extends PApplet{
             b.y += b.d/2; //balls with bigger diameter fall faster
         });
 
-        //remove a ball from the screen if it's past the bottom of the box
+        //remove a ball from the screen if it's past the bottom
         balls = balls.stream()
                      .filter(b -> b.y < height)
                      .collect(Collectors.toList());
